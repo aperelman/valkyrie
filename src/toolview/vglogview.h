@@ -21,7 +21,7 @@
 #ifndef __VK_VGLOGVIEW_H
 #define __VK_VGLOGVIEW_H
 
-#include <QColorGroup>
+//#include <QColorGroup>
 #include <QDateTime>
 #include <QPainter>
 #include <QPixmap>
@@ -67,6 +67,9 @@ class TopStatusItem;
       the branch. the QDomElement refs held by item are then queried
       to fill the item data.
 */
+
+class QTreeWidget;
+
 class VgLogView
 {
 public:

@@ -51,6 +51,7 @@ stopProcess()
 #include <QString>
 #include <QStringList>
 
+#include <QThread>
 
 #if 1
 //#include "config.h"
@@ -388,7 +389,8 @@ bool ToolObject::startProcess( QStringList flags )
          break;
       }
 
-      usleep( WAIT_VG_START_SLEEP * 1000 );
+      QThread::usleep( WAIT_VG_START_SLEEP * 1000 );
+      //usleep( WAIT_VG_START_SLEEP * 1000 );
       i++;
    }
 
@@ -471,8 +473,8 @@ void ToolObject::stopProcess()
 
          for ( int i = 0; i < nCycles; i++ ) {
             qApp->processEvents( QEventLoop::AllEvents, 10/*max msecs*/ );
-            usleep( 1000 * sleepDuration );
-
+            QThread::usleep( 1000 * sleepDuration );
+            //usleep( 1000 * sleepDuration );
             if ( vgproc == 0 ) {
                break;
             }

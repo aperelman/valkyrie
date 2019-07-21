@@ -6,7 +6,7 @@
 ######################################################################
 
 NAME    = valkyrie
-VERSION = 2.0.0
+VERSION = 2.0.1
 PACKAGE = $$NAME-$$VERSION
 
 ######################################################################
@@ -30,7 +30,7 @@ doc_imgs.path  = $$DATADIR/$$PACKAGE/doc/images
 
 ######################################################################
 # Qt modules
-QT += xml
+QT += xml widgets printsupport
 
 ######################################################################
 # Project configuration & compiler options
